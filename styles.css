@@ -1,0 +1,167 @@
+*{
+    margin: 10;
+    padding: 20;
+    box-sizing: border-box;
+}
+body{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    font-family: "Times new Roman";
+    background-color: #86b458;
+  }
+  header img
+{
+    padding: 10vw;
+    align-items: center;
+    padding-top: 20vw;
+    padding-inline-start: 10vw;
+}
+header h1 
+{ 
+    
+    text-align: center;
+    font-size: 40px;
+    color: #af5454;
+    font-style: italic;
+  
+}
+header h5
+{
+    text-align: center;
+    color: #fcfcfc;
+}
+
+header 
+{
+    
+    background-position: 100vw;
+    height: auto;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 40px;
+    background-attachment: fixed;
+    background-size: auto;
+   
+}
+.parallax {
+    /* The image used */
+    /* background-image: url('images.png'); */
+    background-color: rgb(60, 146, 200);
+  
+    /* Full height */
+    height: 100%; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  /* Turn off parallax scrolling for tablets and phones. 
+  Increase the pixels if needed */
+  @media only screen and (max-device-width: 1366px) {
+    .parallax {
+      background-attachment: scroll;
+    }
+  }
+  .container{
+    background-image: url(image3.jpeg); 
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 15px;
+    width: auto;
+    background-color: rgb(8, 204, 218);
+    padding: 0px 15px 10px 15px;
+    border: 2px solid rgb(161, 205, 84);
+    border-radius: 10px 10px;
+    box-shadow: 5px 5px 15px 5px black;
+}
+nav 
+ {
+    height: auto;
+    width: 100vw;
+    /* background-image: linear-gradient(to right #15a2bb , #207ace); */
+    overflow: hidden; 
+    min-width: 600px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0vw auto;
+
+}
+ nav  a{
+
+    position: relative;
+    text-decoration: none;
+    font-family: 'poppins','Times New Roman';
+    /* color: #2cff56;  */
+    font-size: 18px;
+    letter-spacing: 0.5px;
+    padding: 0 10px;
+} 
+ nav a:after {
+    content: "";
+    position: absolute;
+    background-color: #ff3c78;
+    height: 3px;
+    width: 0;
+    left: 0;
+    bottom: 10px;
+    transition: 0.3s;
+} 
+nav a:hover
+{
+    color: #ffffff;
+}
+nav a:hover:after{
+    width: 100%;
+}
+nav a {
+    text-decoration: none;
+    padding: 20px;
+    text-align: center;
+    float: left;
+    color: rgb(207, 29, 163);
+}
+
+    /* CSS is used for styling  content management tool */
+    .editor {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+      }
+  
+      .editor input[type="text"],
+      .editor textarea {
+        margin-bottom: 10px;
+        width: 300px;
+        padding: 5px;
+      }
+  
+      .editor button {
+        padding: 5px 10px;
+        background-color: rgb(226, 87, 87);
+        color: rgb(14, 11, 11);
+        border: none;
+        cursor: pointer;
+      }
+  
+      .preview {
+        margin-top: 20px;
+      }
+
+      .blog-post {
+        color: #ede6e6;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      

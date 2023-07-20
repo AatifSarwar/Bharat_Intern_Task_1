@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Content Managment Tool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="cmt.js">
+    
+</head>
+<body>
+    <header class="parallax">
+        
+        <h1 class="responsive-font-example" class="gradient-text"style="font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; "><b>Content Managment Tool</b></h1>
+        <h5 class="responsive-font-example" class="gradient-text" >Create your own blog using our Site</h5>
+       
+      </header>
+    <nav>
+        
+        <a class="responsive-font-example" href="#" title="Home"> Home </a>
+        <a class="responsive-font-example" href="#" title="" target="_blank"> About Us</a>
+        <a class="responsive-font-example" href="#about"> Blog </a>
+        <a class="responsive-font-example" href="#event"> Services</a>
+        <a class="responsive-font-example" href="#contect"> Contact Us</a>
+
+      
+    </nav>
+    <br>
+    <section class="responsive-font-example">
+        <div class="responsive-font-example" >
+        <!-- <h1 class="responsive-font-example" id="about" style="color:midnightblue;"><b> Content Managment Software </b></h1> -->
+          <div  class="responsive-font-example" class="sampoorna" >
+              <h4 class="responsive-font-example" style="color:azure">
+                <b>CMS : </b> 
+                CMS stands for Content Management System. It is a software application or a set of tools that enables users to create, manage, and modify digital content on a website without requiring technical knowledge or coding skills.
+                A CMS simplifies the process of website creation and maintenance by providing a user-friendly interface for managing content.The primary purpose of a CMS is to separate content from design, allowing users to focus on creating 
+                and managing content while the CMS takes care of the underlying structure and presentation. This separation of concerns enables non-technical users to update and modify website content without affecting the overall design or 
+                structure of the site.
+          
+  
+          </h4> 
+
+         </div>
+         <br>
+    </section>
+    <div class="editor">
+        <h2 >Blog Content Management</h2>
+        <input type="text" id="title" placeholder="Enter blog title" />
+        <input type="text" id="image" placeholder="Enter image URL" />
+        <textarea id="content" rows="5" placeholder="Enter blog content"></textarea>
+        <input type="text" id="video" placeholder="Enter the video url">
+        <button onclick="addBlog()">Add Blog</button>
+      </div> 
+     
+      <div class="container">
+      <div class="preview" id="preview"></div>
+
+    </div>
+    
+    <div class="container"></div>
+    <script>
+        function addBlog() {
+    // Retrieve input values
+    var title = document.getElementById("title").value;
+    var image = document.getElementById("image").value;
+    var content = document.getElementById("content").value;
+    var video = document.getElementById("video").value
+
+    // Create HTML structure for the blog post
+    var blogPost = document.createElement("div");
+    blogPost.className = "blog-post";
+    blogPost.innerHTML = `
+      <h3 style="text-aling:center;">${title}</h3>
+      <br>
+  
+      <img src="${image}" alt="Blog Image">
+  
+      <br>
+      <p style="color: white; font-size: medium; text-align: center">${content}</p>
+      <br>
+   
+      <iframe width="560" height="315" src="${video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      
+    `;
+
+    // Add the blog post to the preview section
+    var previewSection = document.getElementById("preview");
+    previewSection.appendChild(blogPost);
+
+    // Clear input fields after adding the blog
+    document.getElementById("title").value = "";
+    document.getElementById("image").value = "";
+    document.getElementById("content").value = "";
+    document.getElementById("video").value = "";
+  }
+      </script>
+</body>
+</html>
